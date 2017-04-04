@@ -1,9 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
+#include "book.hpp"
 
 using namespace std;
 int main () {
   int n;
+  Book book;
+  book.setName("O Guia do Mochileiro das Galáxias");
   system("clear");
   cout << "\tOpa, tudo bom? Bem vindo à biblioteca do Vaticano" << endl << endl;
   cout << "1 - Fazer doação" << endl;
@@ -26,7 +29,7 @@ int main () {
       cout << "\tNós temos exatamente 0 livros. Muito boa nossa biblioteca, não?\n";
       break;
     case 4:
-      cout << "\tParabéns, você roubou um livro de onde não tinha livro nenhum\n";
+      cout << "\tParabéns, você roubou "<< book.getName() << endl;
       break;
     case 5:
       cout << "\tTchau! Volte sempre!\n";
