@@ -8,7 +8,8 @@ private:
   string author;
   int id;
 public:
-  Book();
+	Book();
+  Book(string name, string author);
   void setAuthor(string Author);
   string getAuthor(void);
   void setName(string Name);

@@ -1,17 +1,17 @@
 #include "book.hpp"
 
-Book::Book (void) {}
+Book::Book(void) {}
 
-void Book::setAuthor (string Author) {
+void Book::setAuthor(string Author) {
   author = Author;
 }
-string Book::getAuthor (void) {
+string Book::getAuthor(void) {
   return author;
 }
 
-void Book::setName (string Name) {
+void Book::setName(string Name) {
   name = Name;
 }
-string Book::getName (void) {
+string Book::getName(void) {
   return name;
 }
