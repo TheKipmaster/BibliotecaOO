@@ -12,7 +12,7 @@ private:
 public:
 	vector<Book> collection;
 	Library();
-	void addBook(Book book);
+	void addBook(Book book, int* size);
 	void removeBook(int id);
 	void list(void);
 };
