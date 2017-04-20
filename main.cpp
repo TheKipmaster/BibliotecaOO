@@ -1,10 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
 #include "book.hpp"
+#include "library.hpp"
 
 using namespace std;
 int main () {
   int n;
+  string name, author;
   Book newBook;
   Library library;
   system("clear");
@@ -20,7 +22,11 @@ int main () {
 
   switch (n) {
     case 1:
-      newBook = Book();
+      cout << "Qual o nome do livro que você deseja doar? ";
+      cin >> name;
+      cout << "Qual o autor do livro? ";
+      cin >> author;
+      newBook = Book(name, author);
       library.addBook(newBook);
       cout << "\tDoação feita. Muito obrigada, senhor!\n";
       break;
@@ -31,7 +37,7 @@ int main () {
       cout << "\tNós temos exatamente 0 livros. Muito boa nossa biblioteca, não?\n";
       break;
     case 4:
-      cout << "\tParabéns, você roubou "<< book.getName() << endl;
+      cout << "\tParabéns, você roubou "<< endl;
       break;
     case 5:
       cout << "\tTchau! Volte sempre!\n";

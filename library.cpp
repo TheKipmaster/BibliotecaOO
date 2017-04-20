@@ -13,7 +13,7 @@ void Library::addBook(Book book) {
 
 void Library::removeBook(int id) {
 	Book book = library.at(id);
-	library.erase(id);
+	library.erase(library.begin()+id);
 	std::cout << book.getName() << "removido com sucesso" << std::endl;
 }
 
