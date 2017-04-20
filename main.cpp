@@ -23,7 +23,7 @@ int drawMenu (int *n) {
 
 using namespace std;
 int main () {
-  int n;
+  int n, size=0, id;
   string name, author;
   Book newBook;
   Library library;
@@ -36,7 +36,7 @@ int main () {
       cout << "Qual o autor do livro? ";
       cin >> author;
       newBook = Book(name, author);
-      library.addBook(newBook);
+      library.addBook(newBook, &size);
       cout << "\tDoação feita. Muito obrigada, senhor!\n";
       getchar();
       getchar();
@@ -49,11 +49,17 @@ int main () {
       drawMenu(&n);
     }
     else if(n == 3) {
-      cout << "\tNós temos exatamente 0 livros. Muito boa nossa biblioteca, não?\n";
+      cout << "\tNós temos exatamente " << library.collection.size() <<" livros. Muito boa nossa biblioteca, não?\n";
+      getchar();
+      getchar();
       drawMenu(&n);
     }
     else if(n == 4) {
-      cout << "\tParabéns, você roubou "<< endl;
+      cout << "\tInforme o id do livro a ser roubado: ";
+      cin >> id;
+      library.removeBook(id);
+      getchar();
+      getchar();
       drawMenu(&n);
     }
     else if(n == 5) {

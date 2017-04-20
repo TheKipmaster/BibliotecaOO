@@ -6,8 +6,9 @@
 
 Library::Library(void) {}
 
-void Library::addBook(Book book) {
-	book.setId(collection.size());
+void Library::addBook(Book book, int* size) {
+	book.setId(*size);
+	(*size)++;
 	collection.push_back(book);
 }
 
@@ -20,6 +21,6 @@ void Library::removeBook(int id) {
 void Library::list(void) {
 	unsigned i;
 	for(i=0; i<collection.size(); i++) {
-		std::cout << "id: " << i << " nome: " << collection.at(i).getName() << std::endl;
+		std::cout << "id: " << collection[i].getId() << " nome: " << collection.at(i).getName() << std::endl;
 	}
 }
