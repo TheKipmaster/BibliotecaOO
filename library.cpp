@@ -7,19 +7,19 @@
 Library::Library(void) {}
 
 void Library::addBook(Book book) {
-	book.setId(0);
-	library.push_back(book);
+	book.setId(collection.size());
+	collection.push_back(book);
 }
 
 void Library::removeBook(int id) {
-	Book book = library.at(id);
-	library.erase(library.begin()+id);
+	Book book = collection.at(id);
+	collection.erase(collection.begin()+id);
 	std::cout << book.getName() << "removido com sucesso" << std::endl;
 }
 
 void Library::list(void) {
-	int i;
-	for(i=0; i<library.size(); i++) {
-		std::cout << "id: " << i << " nome: " << library.at(i).getName() << std::endl;
+	unsigned i;
+	for(i=0; i<collection.size(); i++) {
+		std::cout << "id: " << i << " nome: " << collection.at(i).getName() << std::endl;
 	}
 }

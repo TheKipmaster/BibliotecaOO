@@ -9,12 +9,12 @@ using namespace std;
 
 class Library {
 private:
-	vector<Book> library;
 public:
+	vector<Book> collection;
 	Library();
 	void addBook(Book book);
 	void removeBook(int id);
 	void list(void);
 };
 
-#endif																
+#endif
