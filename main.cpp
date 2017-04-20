@@ -23,9 +23,9 @@ int main () {
   switch (n) {
     case 1:
       cout << "Qual o nome do livro que você deseja doar? ";
-      cin >> name;
+      cin.getline(name, sizeof(name));
       cout << "Qual o autor do livro? ";
-      cin >> author;
+      cin.getline() >> author; getchar();
       newBook = Book(name, author);
       library.addBook(newBook);
       cout << "\tDoação feita. Muito obrigada, senhor!\n";
