@@ -1,3 +1,6 @@
+#ifndef _LIBRARY_HPP_
+#define _LIBRARY_HPP_
+
 #include <string>
 #include <vector>
 #include "book.hpp"
@@ -10,6 +13,8 @@ private:
 public:
 	Library();
 	void addBook(Book book);
-	Book removeBook(int id);
-	void listLibrary(void);
-}
+	void removeBook(int id);
+	void list(void);
+};
+
+#endif																

@@ -1,23 +1,25 @@
+#include <iostream>
 #include <string>
+#include <vector>
 #include "library.hpp"
 #include "book.hpp"
 
 Library::Library(void) {}
 
 void Library::addBook(Book book) {
-	book.id = self.size();
-	self.push_back(book);
+	book.setId(0);
+	push_back(book);
 }
 
-Book Library::removeBook(int id) {
-	Book book = self.at(id);
-	self.erase(id);
-	cout << book.name << "removido com sucesso" << endl;
+void Library::removeBook(int id) {
+	Book book = at(id);
+	erase(id);
+	std::cout << book.getName() << "removido com sucesso" << std::endl;
 }
 
-void Library::listLibrary(void) {
+void Library::list(void) {
 	int i;
-	for(i=0; i<self.size(); i++) {
-		cout << "id: " << i << " nome: " << self.at(i).name endl;
+	for(i=0; i<size(); i++) {
+		std::cout << "id: " << i << " nome: " << at(i).getName() << std::endl;
 	}
 }

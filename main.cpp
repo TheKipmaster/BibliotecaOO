@@ -5,8 +5,8 @@
 using namespace std;
 int main () {
   int n;
-  Book book;
-  book.setName("O Guia do Mochileiro das Galáxias");
+  Book newBook;
+  Library library;
   system("clear");
   cout << "\tOpa, tudo bom? Bem vindo à biblioteca do Vaticano" << endl << endl;
   cout << "1 - Fazer doação" << endl;
@@ -20,6 +20,8 @@ int main () {
 
   switch (n) {
     case 1:
+      newBook = Book();
+      library.addBook(newBook);
       cout << "\tDoação feita. Muito obrigada, senhor!\n";
       break;
     case 2:
