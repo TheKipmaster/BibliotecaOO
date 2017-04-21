@@ -21,6 +21,9 @@ void Library::removeBook(int id) {
 void Library::list(void) {
 	unsigned i;
 	for(i=0; i<collection.size(); i++) {
-		std::cout << "id: " << collection[i].getId() << " nome: " << collection.at(i).getName() << std::endl;
+		std::cout << "id: " << collection[i].getId() 
+				  << " nome: " << collection.at(i).getName() 
+				  << " Author: "<< collection.at(i).getAuthor() 
+				  << std::endl;
 	}
 }
