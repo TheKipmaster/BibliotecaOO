@@ -1,5 +1,3 @@
-#include <iostream>
-#include <stdlib.h>
 #include "book.hpp"
 #include "library.hpp"
 
@@ -15,8 +13,8 @@ int drawMenu (int *n) {
 	do {
 		cin >> *n;
 		if ( (*n > 5) || (*n < 1) )
-			cout << "Tu é burro cara?" << endl;  	/*'n' eh passado a td funcao do menu para que*/
-	} while ( (*n > 5) || (*n < 1) );           /*este possa ser desenhado a qualquer momento*/
+			cout << "Tu é burro cara?" << endl;
+	} while ( (*n > 5) || (*n < 1) );
 
 	return *n;
 }
@@ -32,13 +30,14 @@ int main () {
 	while(n != 5) {
 		if(n == 1) {
       cout << "Qual o nome do livro que você deseja doar? "; //refatorar
-      cin >> name;
+      getchar();
+      getline(cin, name);
       cout << "Qual o autor do livro? ";
-      cin >> author;
+      getchar();
+      getline(cin, author);
       newBook = Book(name, author);
       library.addBook(newBook, &size);
       cout << "\tDoação feita. Muito obrigada, senhor!\n";
-      getchar();
       getchar();
       drawMenu(&n);
     }
@@ -49,7 +48,8 @@ int main () {
       drawMenu(&n);
     }
     else if(n == 3) {
-      cout << "\tNós temos exatamente " << library.collection.size() <<" livros. Muito boa nossa biblioteca, não?\n";
+      cout << "\tNós temos exatamente " << library.collection.size() 
+           <<" livros. Muito boa nossa biblioteca, não?\n";
       getchar();
       getchar();
       drawMenu(&n);
