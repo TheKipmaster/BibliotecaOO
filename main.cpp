@@ -1,5 +1,3 @@
-#include <iostream>
-#include <stdlib.h>
 #include "book.hpp"
 #include "library.hpp"
 

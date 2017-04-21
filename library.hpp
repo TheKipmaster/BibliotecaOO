@@ -1,6 +1,7 @@
 #ifndef _LIBRARY_HPP_
 #define _LIBRARY_HPP_
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include "book.hpp"

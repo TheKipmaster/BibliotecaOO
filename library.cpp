@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
 #include "library.hpp"
-#include "book.hpp"
 
 Library::Library(void) {}
 
